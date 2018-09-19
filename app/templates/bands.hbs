@@ -1,5 +1,14 @@
 <ul>
     {{#each model as |band|}}
-    <li>{{band.name}}</li>
+    <a href="" style="margin-left: 6em">
+        <button class="circular ui animated massive button" style="color: white; background-color: transparent; border: 2px solid white;">
+            <div class="visible content">{{band.name}}</div>
+            <div class="hidden content">
+                <i class="right arrow icon"></i>
+            </div>
+        </button>
+    </a>
+    <br>
+    <br>
     {{/each}}
 </ul>

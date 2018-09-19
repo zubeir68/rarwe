@@ -1,8 +1,12 @@
-import Route from '@ember/routing/route';
 import Ember from 'ember';
 
 var Band = Ember.Object.extend({
-    name: ''
+    name: '',
+    songs: [],
+
+    slug: Ember.computed('name', function() {
+        return this.get('name').dasherize();
+    })
 });
 
 var Song = Ember.Object.extend({
