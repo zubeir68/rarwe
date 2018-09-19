@@ -1,0 +1,16 @@
+<div class="fluid ui action input">
+            {{input type="text" value=title  placeholder="New song..." class="band-input"}}
+            <button class="circular ui vertical animated button" style="color: white; background-color: transparent; border-radius:160px; border: 2px solid white" {{action "createSong"}}>
+                <div class="visible content">Add</div>
+                <div class="hidden content">
+                    <i class="plus icon"></i>
+                </div>
+            </button>
+        </div>
+<div class="ui segment" style="background-color: transparent; margin-top:1vh; padding-bottom: 14em; position:relative; border-radius: 0px">
+    <ul>
+        {{#each model.songs as |song|}}
+        <h1 class="ui header" style="color: white; position: absolute;">{{song.title}} <i class="caret right icon"></i> {{song.rating}}</h1>
+        {{/each}}
+    </ul>
+</div>
