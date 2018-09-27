@@ -43,7 +43,7 @@ export default Ember.Route.extend({
         createBand: function() {
             var name = this.get('controller').get('name');
             var band = Band.create({ name:name });
-            this.modelFor('bands').pushObject(band);
+            this.modelFor('bands').pushObject(band);    
             this.get('controller').set('name', '');
         }
     }
