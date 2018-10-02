@@ -1,8 +1,8 @@
-<div class="ui horizontal segments" style="background-color: transparent">
-    <div class="ui segment">
+<div class="ui grid">
+    <div class="eight wide column">
         <div class="fluid ui action input">
             {{input type="text" value=name  placeholder="New band..." class="band-input"}}
-            <button class="circular ui vertical animated button" style="color: white; background-color: transparent; border-radius:160px; border: 2px solid white" {{action "createBand"}}>
+            <button class="circular ui vertical animated button" style="color: white; background-color: transparent; border-radius:160px; border: 2px solid white" disabled={{isAddButtonDisabled}}  {{action "createBand"}}>
                 <div class="visible content">Add</div>
                 <div class="hidden content">
                     <i class="plus icon"></i>
@@ -25,7 +25,7 @@
     {{/each}}
 </ul>
     </div>
-    <div class="ui segment">
+    <div class="eight wide column">
         {{outlet}}
     </div>
 </div>
