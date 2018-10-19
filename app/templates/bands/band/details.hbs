@@ -1,5 +1,26 @@
 <!-- app/templates/band/band/details.hbs -->
 <div class="ui segment" style="background-color: transparent; margin-left:2em">
     <h1 class="ui header" style="color:white">Description</h1>
-    <p style="color:white; font-size: 2em">{{model.description}}</p>
+    {{#if isEditing}}
+      <button class="ui animated fade button" style="border-radius:160px; background-color:transparent; border: 2px solid white; color:white" {{action "save"}}>
+          <div class="visible content">Save</div>
+          <div class="hidden content">
+              <i class="save icon"></i>
+          </div>
+      </button>
+    {{else}}
+      <button class="ui animated fade button" style="border-radius:160px; background-color:transparent; color:white; border: 2px solid white;" {{action "edit"}}>
+          <div class="visible content">Edit</div>
+          <div class="hidden content">
+              <i class="edit icon"></i>
+          </div>
+      </button>
+    {{/if}}
+    {{#if isEditing}}
+        <div class="ui form" >
+            {{textarea id="ui-form" value=model.description}}
+        </div>
+        {{else}}
+        <p style="color:white; font-size: 2em">{{model.description}}</p>
+    {{/if}}
 </div>

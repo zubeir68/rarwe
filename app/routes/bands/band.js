@@ -6,10 +6,6 @@ export default Route.extend({
         return bands.findBy('slug', params.slug);
     },
 
-    didTransition: function() {
-        document.title = 'Bands - Rock & Roll';
-    },
-
     afterModel: function(band) {
         var description = band.get('description');
         if (Ember.isEmpty(description)) {

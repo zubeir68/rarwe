@@ -18,3 +18,8 @@ body {
     background-color: transparent;
     border-bottom: 2px solid white;
 }
+#ui-form{
+    background-color: transparent;
+    color: white;
+    border: 2px solid lightblue;
+}

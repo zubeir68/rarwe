@@ -6,6 +6,9 @@ import Song from '../models/song';
 
 
 export default Ember.Route.extend({
+
+    
+
     model: function() {
         
         var blackDog = Song.create ({
@@ -56,6 +59,9 @@ export default Ember.Route.extend({
             this.modelFor('bands').pushObject(band);    
             this.get('controller').set('name', '');
             this.transitionTo('bands.band.songs', band);
-        }
+        },
+        didTransition: function() {
+            document.title = 'Bands - Rock & Roll';
+        },
     }
 });
