@@ -2,7 +2,7 @@
     <ul>
         {{#if canCreateSong}}
         <div class="fluid ui action input">
-            {{input type="text" value=title placeholder="New song..." class="band-input"}}
+            {{input type="text" value=title placeholder="New song..." id="songs-input"}}
             <button class="circular ui vertical animated button" disabled={{isAddButtonDisabled}} style="color: white; background-color: transparent; border-radius:160px; border: 2px solid white"
                 {{action "createSong"}}>
                 <div class="visible content">Add</div>

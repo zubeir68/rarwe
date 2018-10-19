@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
     title: '',
 
-    songCreatedStarted: false,
+    songCreationStarted: false,
 
     canCreateSong: Ember.computed('songCreationStarted', 'model.song.length', function() {
         return this.get('songCreationStarted') || this.get('model.songs.length');

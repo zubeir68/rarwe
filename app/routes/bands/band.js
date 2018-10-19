@@ -4,5 +4,18 @@ export default Route.extend({
     model: function(params) {
         var bands = this.modelFor('bands');
         return bands.findBy('slug', params.slug);
+    },
+
+    didTransition: function() {
+        document.title = 'Bands - Rock & Roll';
+    },
+
+    afterModel: function(band) {
+        var description = band.get('description');
+        if (Ember.isEmpty(description)) {
+            this.transitionTo('bands.band.songs');
+        } else {
+            this.transitionTo('bands.band.details');
+        }
     }
 });

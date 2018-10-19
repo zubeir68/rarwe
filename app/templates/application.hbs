@@ -10,16 +10,16 @@
     </a>
     <div class="ui hidden divider"></div>
 
-    <a href="/bands" style="margin-left: 3em">
-        <button class="circular ui large animated button" style="color: white; background-color: transparent; border: 2px solid white;">
-            <div class="visible content">Bands</div>
-            <div class="hidden content">
-                <i class="bolt icon"></i>
-            </div>
-        </button>
-    </a>
+    {{#link-to "index"}}
+      <button class="circular ui large animated button" style="color: white; background-color: transparent; border: 2px solid white;">
+         <div class="visible content">Bands</div>
+         <div class="hidden content">
+             <i class="bolt icon"></i>
+         </div>
+      </button>
+    {{/link-to}}
 
-    <div class="ui divider"></div>
+    <div class="ui divider" style="border-color:grey"></div>
 
 </div>
 <div style="margin-top: 10em">

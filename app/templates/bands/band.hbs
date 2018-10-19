@@ -1,2 +1,21 @@
 
-{{outlet}}
+        {{#link-to "bands.band.details" model}}
+        <button class="circular ui animated fade button" style="color: white; background-color: transparent; border: 2px solid white; margin-left: 2em">
+            <div class="visible content">Details</div>
+            <div class="hidden content">
+                <i class="info icon"></i>
+            </div>
+        </button>
+        {{/link-to}}
+        {{#link-to "bands.band.songs" model}}
+        <button class="circular ui animated fade button" style="color: white; background-color: transparent; border: 2px solid white;">
+            <div class="visible content">Songs</div>
+            <div class="hidden content">
+                <i class="music icon"></i>
+            </div>
+        </button>
+        {{/link-to}}
+<div class="">
+    {{outlet}}
+</div>
+

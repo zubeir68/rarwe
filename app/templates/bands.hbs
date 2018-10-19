@@ -1,7 +1,7 @@
 <div class="ui grid">
     <div class="eight wide column">
         <div class="fluid ui action input">
-            {{input type="text" value=name  placeholder="New band..." class="band-input"}}
+            {{input type="text" value=name  placeholder="New band..." id="band-input"}}
             <button class="circular ui vertical animated button" style="color: white; background-color: transparent; border-radius:160px; border: 2px solid white" disabled={{isAddButtonDisabled}}  {{action "createBand"}}>
                 <div class="visible content">Add</div>
                 <div class="hidden content">
@@ -9,16 +9,14 @@
                 </div>
             </button>
         </div>
-        <div class="ui hidden divider"></div>
+        <br>
+        <br>
         <ul>
     {{#each model as |band|}}
-    {{#link-to "bands.band.songs" band}}
+    {{#link-to "bands.band" band}}
     <a href="" style="margin-left: 0em">
-        <button class="fluid circular ui animated fade huge button" style="color: white; background-color: transparent; border: 2px solid white;">
-            <div class="visible content">{{band.name}}</div>
-            <div class="hidden content">
-                <i class="right arrow icon"></i><i class="music icon"></i>
-            </div>
+        <button class="fluid circular ui huge button" style="color: white; background-color: transparent; border: 2px solid white;">
+            {{band.name}}
         </button>
     </a>
     {{/link-to}}

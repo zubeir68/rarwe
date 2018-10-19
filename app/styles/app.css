@@ -4,11 +4,17 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.band-input{
+#band-input{
     /*style="color:white ;border-radius: 0px; margin-left:3em; background-color: transparent; border-bottom: 2px solid white"*/
     color: white;
     border-radius: 0px;
     margin-left: 3em;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+}
+#songs-input {
+    color: white;
+    border-radius: 0px;
     background-color: transparent;
     border-bottom: 2px solid white;
 }
